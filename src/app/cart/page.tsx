@@ -14,7 +14,7 @@ const CartPage = () => {
   const cartItems = useAppSelector(getCart);
   let priceOfProduct = 0;
 
-  cartItems.forEach((items) => {
+  cartItems.forEach((items: any) => {
     if (items.price) {
       priceOfProduct += items.price * items.quantity;
     }

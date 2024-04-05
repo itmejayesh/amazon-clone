@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../app/redux/index";
+import { RootState } from "@app/redux/index";
 
 interface Product {
   id: number;
