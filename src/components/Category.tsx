@@ -11,8 +11,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useRouter } from "next/navigation";
 
 const Category = () => {
+  const router = useRouter();
   const { getProductsofMens, mensClothing, getDataFromSupabase, products } =
     useSupabase();
   useEffect(() => {
@@ -30,11 +32,13 @@ const Category = () => {
           <div className="grid grid-cols-2 gap-5 p-5 mix-blend-multiply">
             {mensClothing.slice(0, 4).map((items: any) => (
               <Image
+                onClick={() => router.push(`search/mens`)}
                 src={items.image}
                 width={100}
                 height={100}
                 alt=""
                 key={items.id}
+                className="cursor-pointer"
               />
             ))}
           </div>
@@ -45,11 +49,13 @@ const Category = () => {
           <div className="grid grid-cols-2 gap-5 p-5 mix-blend-multiply">
             {mensClothing.slice(0, 4).map((items: any) => (
               <Image
+                onClick={() => router.push(`search/mens`)}
                 src={items.image}
                 width={100}
                 height={100}
                 alt=""
                 key={items.id}
+                className="cursor-pointer"
               />
             ))}
           </div>
@@ -60,11 +66,13 @@ const Category = () => {
           <div className="grid grid-cols-2 gap-5 p-5 mix-blend-multiply">
             {mensClothing.slice(0, 4).map((items: any) => (
               <Image
+                onClick={() => router.push(`search/mens`)}
                 src={items.image}
                 width={100}
                 height={100}
                 alt=""
                 key={items.id}
+                className="cursor-pointer"
               />
             ))}
           </div>
@@ -75,7 +83,13 @@ const Category = () => {
             <div className="row-span-1 h-fit bg-white p-2">
               <div className="p-3 mix-blend-multiply">
                 <div className="flex items-center justify-center gap-x-5">
-                  <Image src="/01.jpg" width={100} height={100} alt="" />
+                  <Image
+                    src="/01.jpg"
+                    width={100}
+                    height={100}
+                    alt=""
+                    className="cursor-pointer"
+                  />
                   <p className="text-xl font-semibold">
                     Save up to 28% with GST*
                   </p>
@@ -88,11 +102,13 @@ const Category = () => {
                   <div key={items.id}>
                     <div className=" flex gap-x-5 p-1">
                       <Image
+                        onClick={() => router.push(`search/men`)}
                         src={items.image}
                         width={80}
                         height={100}
                         alt=""
                         key={items.id}
+                        className="cursor-pointer"
                       />
                       <h2 className="mt-5 font-bold">{items.title}</h2>
                     </div>
@@ -125,7 +141,7 @@ const Category = () => {
               height={200}
               alt=""
               src={`/03.jpg`}
-              className="absolute -top-2 h-full w-full object-cover"
+              className="absolute -top-2 h-full w-full cursor-pointer object-cover"
             />
           </div>
         </div>
@@ -135,11 +151,13 @@ const Category = () => {
           <div className="grid grid-cols-2 gap-5 p-5 mix-blend-multiply">
             {mensClothing.slice(0, 4).map((items: any) => (
               <Image
+                onClick={() => router.push(`search/mens`)}
                 src={items.image}
                 width={100}
                 height={100}
                 alt=""
                 key={items.id}
+                className="cursor-pointer"
               />
             ))}
           </div>
@@ -152,11 +170,13 @@ const Category = () => {
           <div className="grid grid-cols-2 gap-5 p-5 mix-blend-multiply">
             {mensClothing.slice(0, 4).map((items: any) => (
               <Image
+                onClick={() => router.push(`search/mens`)}
                 src={items.image}
                 width={100}
                 height={100}
                 alt=""
                 key={items.id}
+                className="cursor-pointer"
               />
             ))}
           </div>
@@ -169,11 +189,13 @@ const Category = () => {
           <div className="grid grid-cols-2 gap-5 p-5 mix-blend-multiply">
             {mensClothing.slice(0, 4).map((items: any) => (
               <Image
+                onClick={() => router.push(`search/mens`)}
                 src={items.image}
                 width={100}
                 height={100}
                 alt=""
                 key={items.id}
+                className="cursor-pointer"
               />
             ))}
           </div>
@@ -197,6 +219,7 @@ const Category = () => {
               >
                 <div className="flex h-40 items-center justify-center overflow-hidden rounded-none bg-[#f7f8f8] p-12">
                   <Image
+                    onClick={() => router.push(`product/${product.id}`)}
                     src={product.image}
                     width={70}
                     height={100}
@@ -233,6 +256,7 @@ const Category = () => {
               >
                 <div className="flex h-40 items-center justify-center overflow-hidden rounded-none bg-[#f7f8f8] p-12">
                   <Image
+                    onClick={() => router.push(`product/${product.id}`)}
                     src={product.image}
                     width={70}
                     height={100}

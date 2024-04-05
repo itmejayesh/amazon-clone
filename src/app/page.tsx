@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
