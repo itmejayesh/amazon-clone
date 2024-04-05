@@ -151,7 +151,7 @@ const ShoppingCart = ({
                   Your shopping cart is waiting. Give it purpose – fill it with
                   groceries, clothing, household supplies, electronics and more.
                   Continue shopping on the Amazon.in homepage, learn about
-                  today's deals, or visit your Wish List.
+                  today&apos;s deals, or visit your Wish List.
                 </p>
               </div>
             </>

@@ -24,7 +24,7 @@ const urls = [
   "https://images-eu.ssl-images-amazon.com/images/G/31/img24/Fresh/GW/Hero/April24/2/2nd_Fresh_GW_Hero_PC1x_RC._CB561462270_.jpg",
 ];
 
-function page() {
+function HomePage() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true }),
   );
@@ -76,4 +76,4 @@ function page() {
   );
 }
 
-export default page;
+export default HomePage;

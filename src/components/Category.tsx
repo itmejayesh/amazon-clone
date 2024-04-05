@@ -13,19 +13,12 @@ import {
 } from "@/components/ui/carousel";
 
 const Category = () => {
-  const {
-    getProductsofMens,
-    mensClothing,
-    womenClothing,
-    getProductsofWomen,
-    getDataFromSupabase,
-    products,
-  } = useSupabase();
+  const { getProductsofMens, mensClothing, getDataFromSupabase, products } =
+    useSupabase();
   useEffect(() => {
     getProductsofMens();
-    getProductsofWomen();
     getDataFromSupabase();
-  }, []);
+  }, [getProductsofMens, getDataFromSupabase]);
 
   return (
     <div className="mb-5 flex w-full flex-col gap-5 ">

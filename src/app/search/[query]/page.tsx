@@ -4,12 +4,12 @@ import React, { useEffect } from "react";
 import { useSupabase } from "../../../../hooks/useSupabase";
 import SearchResults from "@/components/SearchResults";
 
-const page = () => {
+const SearchPage = () => {
   const { query } = useParams();
   const { filterData, getFilteredData } = useSupabase();
   useEffect(() => {
     getFilteredData(query.toString());
-  }, []);
+  }, [getFilteredData, query]);
   return (
     <div className="h-[85.4vh]">
       <SearchResults filterData={filterData} />
@@ -17,4 +17,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SearchPage;

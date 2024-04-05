@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useAppSelector } from "../../../hooks/useRedux";
 import { getCart } from "../../../redux/cartSlice";
 
-const page = () => {
+const CartPage = () => {
   const [isChecked, setIsChecked] = useState(false);
   const handleCheckboxChange = (e: boolean) => {
     setIsChecked(e);
@@ -39,4 +39,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CartPage;
