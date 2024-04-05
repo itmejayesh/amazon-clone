@@ -50,7 +50,6 @@ const OrderSummary = () => {
                 alt=""
                 className="object-contain pt-2 mix-blend-multiply"
               />
-              <h2 className="pt-2 text-xs font-semibold">{cartItem.title}</h2>
               <p className="pt-2 text-sm font-medium">
                 Product Quantity: {cartItem.quantity}
               </p>
