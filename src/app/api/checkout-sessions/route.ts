@@ -26,8 +26,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
     },
     line_items: arrangeItems,
     mode: "payment",
-    success_url: "http://localhost:3000/",
-    cancel_url: "http://localhost:3000/checkout",
+    success_url: "https://amazon-clone-k6cdb9a6e-itmejayesh.vercel.app/",
+    cancel_url: "https://amazon-clone-k6cdb9a6e-itmejayesh.vercel.app/checkout",
     metadata: {
       email,
       images: JSON.stringify(items.map((item: any) => item.image)),
